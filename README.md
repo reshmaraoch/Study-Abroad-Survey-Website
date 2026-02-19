@@ -2,6 +2,8 @@
 
 A full-stack web application that collects and visualizes study abroad experiences from students.
 
+Link: https://study-abroad-survey.up.railway.app/
+
 ## About
 
 Most surveys are boring - long, flat, and forgettable. This app makes sharing your study abroad story feel more like a conversation than a form. With a step-by-step flow, progress indicators, and a clean design, students are guided through sharing their experiences in a way that's actually enjoyable to fill out.
@@ -34,7 +36,7 @@ Responses are stored in a PostgreSQL database and visualized on an admin summary
 
 ## Admin Dashboard
 
-<img width="1326" height="796" alt="image" src="https://github.com/user-attachments/assets/1385fa50-901e-4b54-87e5-8afd39d17885" />
+<img width="1117" height="796" alt="image" src="https://github.com/user-attachments/assets/2a704c2e-4a35-458b-9dae-bffc1b9a5f43" />
 
 
 <img width="867" height="849" alt="image" src="https://github.com/user-attachments/assets/3cf398be-162b-4cb4-967b-4e8fc98a7b4e" />
