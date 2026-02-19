@@ -41,6 +41,50 @@ Responses are stored in a PostgreSQL database and visualized on an admin summary
 
 <img width="867" height="849" alt="image" src="https://github.com/user-attachments/assets/3cf398be-162b-4cb4-967b-4e8fc98a7b4e" />
 
+## Running Locally
+
+### Prerequisites
+- Python 3.11+
+- Pipenv
+- PostgreSQL database (local or hosted)
+
+### Steps
+
+1. **Clone the repo**
+```bash
+   git clone https://github.com/reshmaraoch/Study-Abroad-Survey-Website.git
+   cd Study-Abroad-Survey-Website
+```
+
+2. **Install dependencies**
+```bash
+   pipenv install
+```
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root folder:
+```
+   DATABASE_URL=postgresql://your_db_url_here
+```
+
+4. **Set up the database**
+   
+   Run the schema to create the table:
+```bash
+   psql $DATABASE_URL -f schema.sql
+```
+
+5. **Run the app**
+```bash
+   pipenv run flask --app server run
+```
+
+6. **Visit the app**
+   
+   Open your browser and go to `http://127.0.0.1:5000`
+
+
 
 
 
