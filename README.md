@@ -4,7 +4,7 @@ A full-stack web application that collects and visualizes study abroad experienc
 
 ## About
 
-Most surveys are boring — long, flat, and forgettable. This app makes sharing your study abroad story feel more like a conversation than a form. With a step-by-step flow, progress indicators, and a clean design, students are guided through sharing their experiences in a way that's actually enjoyable to fill out.
+Most surveys are boring - long, flat, and forgettable. This app makes sharing your study abroad story feel more like a conversation than a form. With a step-by-step flow, progress indicators, and a clean design, students are guided through sharing their experiences in a way that's actually enjoyable to fill out.
 
 Responses are stored in a PostgreSQL database and visualized on an admin summary dashboard with charts and statistics.
 
@@ -33,6 +33,11 @@ Responses are stored in a PostgreSQL database and visualized on an admin summary
 | `/api/results` | JSON API for all responses |
 
 ## Admin Dashboard
+
+<img width="1326" height="796" alt="image" src="https://github.com/user-attachments/assets/fbddb251-d836-4133-a2a4-92f2152fd0b7" />
+
+<img width="867" height="849" alt="image" src="https://github.com/user-attachments/assets/3cf398be-162b-4cb4-967b-4e8fc98a7b4e" />
+
 
 
 
