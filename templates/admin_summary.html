@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Survey Summary{% endblock %}
+
+{% block content %}
+  <h2>Survey Summary</h2>
+  <p class="muted">We have recieved {{ data.total_responses }} responses.</p>
+
+  <p class="muted">Charts below are based on collected responses.</p>
+
+  <h4>Which country are you currently studying in?</h4>
+  <div class="chart-container">
+    <canvas id="chartCountry"></canvas>
+  </div>
+
+  <h4>Which level of study are you pursuing?</h4>
+  <div class="chart-container">
+    <canvas id="chartLevel"></canvas>
+  </div>
+  
+  <h4>What is your expected graduation year?</h4>
+  <div class="chart-container">
+    <canvas id="chartGradYear"></canvas>
+  </div>
+
+  <h4>Why did you choose to study away from your home country?</h4>
+  <div class="chart-container">
+    <canvas id="chartReasons"></canvas>
+  </div>
+
+  <h4>What do you miss the most about your home country?</h4>
+  <div class="chart-container">
+    <canvas id="chartMissed"></canvas>
+  </div>
+
+  <h4>What's the best thing you've experienced so far while studying abroad? </h4>
+  <ol class="list-scroll">
+    {% for txt in data.best_experiences %}
+      <li>{{ txt }}</li>
+    {% endfor %}
+  </ol>
+
+  <h4>Has studying abroad changed your perspective about the world?</h4>
+  <div class="chart-container">
+    <canvas id="chartPerspective"></canvas>
+  </div>
+
+  <h4>If yes, What changed?</h4>
+  <ol class="list-scroll">
+    {% for txt in data.perspective_changes %}
+      <li>{{ txt }}</li>
+    {% endfor %}
+  </ol>
+
+  <h4>Responses per day</h4>
+  <div class="chart-container">
+    <canvas id="chartDaily"></canvas>
+  </div>
+
+  <script>
+    const summaryData = {{ data | tojson }};
+  </script>
+
+  <a class="pure-button pure-button-primary" href="{{ url_for('index') }}"><strong>Return to Home</strong></a>
+{% endblock %}

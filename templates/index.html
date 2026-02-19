@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Welcome to the Study Abroad Survey!</h2>
+  <p> Studying abroad is more than just attending classes in a different country. Its a journey that shapes academic paths, careers, and personal growth. 
+  </p>
+
+  <p>    
+      With this survey, we aim to learn more about how students experience this transition: what motivates them to pursue studies abroad, the opportunities they seek, the challenges they face, and the memorable moments that define their journey.
+  </p>
+      
+  <p>
+      Your input will help us build a clearer picture of the international student experience, from early preparation and decision-making to life on campus in a new country. 
+      The insights gathered may be used to highlight common motivations, identify support needs, and celebrate the diverse experiences of students worldwide.
+  </p> 
+  <p>If <strong>*</strong> is present after the question, then it means the question is mandatory.</p>    
+  <p> 
+      Participation in this survey is entirely voluntary. You are free to decline without any consequence, and you may skip questions you don’t feel comfortable answering. All responses will be kept confidential and used solely for educational purposes.
+  </p> 
+  <p>    
+      If you agree to take part, please click <strong>“Consent”</strong> to begin. If you prefer not to participate, simply click <strong>“Decline”.</strong>
+  </p>
+
+  <div style="display:flex; gap:.5rem; margin-top:1rem;" class="button-container">
+    <a class="pure-button pure-button-primary" href="{{ url_for('survey') }}"><strong>Consent →</strong></a>
+    <a class="pure-button pure-button-secondary" href="{{ url_for('decline') }}">Decline</a>
+  </div>
+{% endblock %}
+

@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block content %}
+<h2> Please fill out the Survey! </h2>
+ <form class="pure-form pure-form-stacked" method="POST" action="/survey">
+    
+  <!--Question1: Full Name-->
+    <label for="name"><strong>Full Name*</strong></label>
+    <div style="display: flex; align-items: center; gap: 10px;">
+    <input
+        id="name"
+        name="name"
+        type="text"
+        minlength="3"
+        required
+        placeholder="Ex: Tony Stark" />
+    </div>     
+    
+    <!--Question2: Country-->
+    <label for="country"><strong>Which country are you currently studying in?</strong></label>
+    <select name="country" id="country"  class="pure-input-2-3">
+      <option value=""> Select the country</option>
+      <option value="United States">United States</option>
+      <option value="Canada">Canada</option>
+      <option value="United Kingdom">United Kingdom</option>
+      <option value="Australia">Australia</option>
+      <option value="Germany">Germany</option>
+      <option value="France">France</option>
+      <option value="India">India</option>
+      <option value="Japan">Japan</option>
+      <option value="South Korea">South Korea</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <div id="other-country-group" class="conditional-section">
+    <label for="other_country">Please specify the country</label>
+    <input type="text" name="other_country" id="other_country" class="pure-input-2-3">
+    </div>
+
+    <!--Question3: Degree Level-->
+    <label><strong>Which level of study are you pursuing?</strong></label>
+    <label class="pure-radio" style="padding:0px;">
+      <input type="radio" name="study_level" value="Undergraduate"> Undergraduate
+    </label>
+    <label class="pure-radio" style="padding:0px;" >
+      <input type="radio" name="study_level" value="Masters"> Masters
+    </label>
+    <label class="pure-radio" style="padding:0px;">
+      <input type="radio" name="study_level" value="PhD"> PhD
+    </label>
+
+    <!--Question4: Graduating Year-->
+    <label for="grad_year"><strong>What is your expected graduation year?</strong></label>
+    <select name="grad_year" id="grad_year" class="pure-input-2-3">
+      <option value="">Select year</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+      <option value="2029">2029</option>
+      <option value="2030">2030</option>
+    </select>
+    
+    <!--Question5: Why away from home? -->
+    <label><strong>Why did you choose to study away from your home country?</strong></label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" name="study_reason" value="Better education quality"> Better education quality </label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" name="study_reason" value="Research opportunities"> Research opportunities </label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" name="study_reason" value="Cultural exposure"> Cultural exposure </label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" name="study_reason" value="Career prospects"> Career prospects </label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" name="study_reason" value="Scholarships or funding"> Scholarships or funding </label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" name="study_reason" value="Prestige of foreign universities"> Prestige of foreign universities </label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" name="study_reason" value="Family or personal reasons"> Family or personal reasons </label>
+    
+    <!--Question6: Most Missed --> 
+    <label for="miss_most"><strong>What do you miss the most about your home country?</strong></label>
+    <select id="miss_most" name="miss_most" class="pure-input-2-3">
+      <option value="">Select</option>
+      <option value="Family & Friends">Family & Friends</option>
+      <option value="Food">Food</option>
+      <option value="Festivals">Festivals</option>
+      <option value="Speaking your Language">Speaking your Language</option>
+      <option value="Weather">Weather</option>
+      <option value="Comfort zone">Comfort Zone - House/Room/Couch</option>
+    </select>
+
+    <!--Question7: Best Experience so far--> 
+    <label for="best_experience"><strong>What's the best thing you've experienced so far while studying abroad?</strong></label>
+    <textarea 
+       id="best_experience" 
+       name="best_experience" 
+       class="pure-input-2-3" 
+       rows="4" 
+       placeholder="Highlight of your journey so far..."></textarea> 
+
+    <!--Question8: Perspective of the world--> 
+    <label for="perspective_change"><strong>Has studying abroad changed your perspective about the world?</strong></label>
+    <label class="pure-checkbox" style="padding:0px;">
+    <input type="checkbox" id="perspective_change" name="perspective_change"> Yes </label>
+
+    <div id="perspective-details" class="conditional-section">
+    <label for="perspective_details" style="padding:0px;">What Changed?</label>
+    <textarea
+       id="perspective_details"
+       name="perspective_details"
+       class="pure-input-2-3"
+       rows="2"></textarea>
+    </div> 
+     
+    <div style="margin-top:1rem; display: flex;" class="button-container1">
+      <button type="submit" class="pure-button pure-button-primary"> <strong>Next</strong> </button>
+      <a class="pure-button pure-button-secondary" href="{{ url_for('index') }}">Back</a>
+    </div>
+     </form>
+    
+{% endblock %}
