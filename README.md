@@ -34,7 +34,8 @@ Responses are stored in a PostgreSQL database and visualized on an admin summary
 
 ## Admin Dashboard
 
-<img width="1326" height="796" alt="image" src="https://github.com/user-attachments/assets/fbddb251-d836-4133-a2a4-92f2152fd0b7" />
+<img width="1326" height="796" alt="image" src="https://github.com/user-attachments/assets/1385fa50-901e-4b54-87e5-8afd39d17885" />
+
 
 <img width="867" height="849" alt="image" src="https://github.com/user-attachments/assets/3cf398be-162b-4cb4-967b-4e8fc98a7b4e" />
 
