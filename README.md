@@ -1,39 +1,38 @@
-# CSCI 5117 Fall 2024 -- Module 1 Homework
+# Study Abroad Survey Website
 
-Instructions can be [found on canvas](https://canvas.umn.edu/courses/460699/pages/homework-1)
+A full-stack web application that collects and visualizes study abroad experiences from students.
 
-You are required to fill out all of the following sections to help us grade your submission:
+## About
 
-## Student (to be completed individually)
+Most surveys are boring — long, flat, and forgettable. This app makes sharing your study abroad story feel more like a conversation than a form. With a step-by-step flow, progress indicators, and a clean design, students are guided through sharing their experiences in a way that's actually enjoyable to fill out.
 
-* Reshma Rao Chandukudlu Hosamane, chand950@umn.edu
+Responses are stored in a PostgreSQL database and visualized on an admin summary dashboard with charts and statistics.
 
-## Link to Site
-(This should be hosted, accessible, and working, per the technical requirements)
+## Features
 
-(https://study-abroad-survey.onrender.com)
+- Multi-step survey form with progress indicators
+- Multi-select checkbox questions stored as arrays in PostgreSQL
+- Admin dashboard at `/admin/summary` with data visualizations
+- JSON API endpoint at `/api/results` for raw data access
+- Jinja2 templating for consistent page layouts
 
-## Task completion Notes
+## Tech Stack
 
-Please list any features you did not complete here, as well as any notes you have.
+- **Backend:** Python, Flask
+- **Database:** PostgreSQL
+- **Frontend:** Jinja2, HTML/CSS, chart.js
+- **Deployment:** Railway
 
-1. I have completed all the features.
-2. "First Name" is the text field with the minimum character 3 requirement.
-3. I have added multi-select question which is stored as an array in Postgres Database.
-4. To access summary - need to explicitly mention in the url \admin\summary.
-5. To access json format - need to explicitly add in the url \api\results?reverse=true 
+## Routes
 
-## Challenge Task
+| Route | Description |
+|-------|-------------|
+| `/` | Home / landing page |
+| `/survey` | Multi-step survey form |
+| `/admin/summary` | Admin dashboard with visualizations |
+| `/api/results` | JSON API for all responses |
 
-* I started the challenge task: [yes/no] Yes
-* I completed the challenge task: [yes/no] Yes
+## Admin Dashboard
 
-(if applicable) link: (https://study-abroad-survey.onrender.com/admin/summary)
 
-## Any Extra Notes?
 
-Fill in this with anything else you would like us to know about your submission.
-
-I used progress steps to clearly visualize page navigation and applied Jinja templating to maintain consistency across pages, which proved to be extremely useful.
-I have generated some data and added it to the database so that we can see better visualization on the summary page.
-It took me more than 5 minutes to spin up the page sometimes so if that happens please wait, I know my website works, I have tested it well. 
